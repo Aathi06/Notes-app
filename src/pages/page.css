@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+.note-page{
+    position: relative;
+    height: 100%;
+    justify-content: center;
+    gap:2em;
+}
+.note-create-wrapper{
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    @apply shadow-xl ;
+}
+.add-btn{
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    @apply bg-blue-500 shadow-md;
+    position: absolute;
+    bottom: 2em;right:1.2em;
+}
+.cancel-add{
+    position: absolute;
+    top:1.3em;right:1.5em;
+}
+input,textarea{
+    border: none;
+    outline: none;
+}
+#note-content{
+    margin: 2em 0 1em 1.5em;
+    font-size:medium;
+    width: 80%;
+    height: 70%;
+    padding: 1em;
+    letter-spacing: 1px;
+}
+.note-title{
+    margin: 3em 0 1em 1em;
+    font-size: larger;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.notes-container{
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}

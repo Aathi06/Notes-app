@@ -1,12 +1,18 @@
-import { useState } from "react";
-import NoteCreation from "./NoteCreation";
-import NoteList from "./NoteList"
+import { useDebugValue, useState } from "react";
+import NoteList from "./NoteList";
+import { useNavigate, useOutlet } from "react-router";
 
 export default function NotePage(){
 
+    const outlet=useOutlet();
+
     const [notes,setNotes]=useState([])
-    const [showModal,setModal]=useState(false);
+    const navigate=useNavigate();
     
+    function toNoteCreation(){
+        navigate("create")
+    }
+
     function addNote(newNote){
         setNotes(prev=>{
             return (
@@ -19,11 +25,16 @@ export default function NotePage(){
     }
 
     return(
-        <div>
-        <h1>THis is the note section</h1>
-        {showModal && <NoteCreation onAddNote={addNote} onClose={()=>setModal(false)}/>}
-        <NoteList notes={notes}/>
-        <button className="add-note" onClick={()=>setModal(true)}>Add</button>
+        <div className="note-page flex-col mx-1 ">
+        <button className="add-note hover:bg-blue-200 bg-blue-300 font-bold  rounded-lg w-16 h-8 w-[100%]" onClick={toNoteCreation}>+</button>
+        <NoteList/>
+        {
+            outlet && (
+                <div className="note-create-wrapper">
+                        {outlet}
+                </div>
+            )
+        }
         </div>
     )
 

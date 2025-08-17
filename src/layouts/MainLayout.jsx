@@ -1,16 +1,17 @@
-
 import GreetingBar from "../components/GreetingTab";
 import SearchBar from "../components/SearchBar";
-
-import NotePage from "../pages/NotePage";
+import { Outlet } from "react-router";
+import NavBar from "../components/NavBar";
 
 export default function MainLayout(){
     return(
-        <div>
+        <div className=" main-layout">
             <GreetingBar/>
             <SearchBar/>
-            <h1>This is the Main Layout</h1>
-            <NotePage/>
+            <NavBar/>
+            <div className="section-container">
+                <Outlet/>
+            </div>
         </div>
     )
 }

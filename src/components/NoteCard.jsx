@@ -1,8 +1,9 @@
-export default function NoteCard({noteData}){
+export default function NoteCard({note}){
     return(
         <div className="note-card">
-            <h3>{noteData.noteTitle}</h3>
-            <p>{noteData.noteContent}</p>
+            <h2>{note.noteTitle}</h2>
+            <hr />
+            <p>{note.noteContent}</p>
         </div>
     )
 }
