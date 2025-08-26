@@ -1,4 +1,3 @@
-import { useDebugValue, useState } from "react";
 import NoteList from "./NoteList";
 import { useNavigate, useOutlet } from "react-router";
 
@@ -6,22 +5,10 @@ export default function NotePage(){
 
     const outlet=useOutlet();
 
-    const [notes,setNotes]=useState([])
     const navigate=useNavigate();
     
     function toNoteCreation(){
         navigate("create")
-    }
-
-    function addNote(newNote){
-        setNotes(prev=>{
-            return (
-                [
-                    ...prev,
-                    newNote,
-                ]
-            )
-        })
     }
 
     return(

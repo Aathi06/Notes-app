@@ -2,7 +2,7 @@
 
 .search-bar{
     height: 2rem;
-    @apply bg-gray-300 rounded-lg p-2 mr-2 h-12;
+    @apply bg-gray-300 rounded-lg p-2 mr-2;
     
 }
 .search-bar >input{
@@ -12,10 +12,6 @@
     display: flex;
     gap: 1.5em;
     @apply text-white font-bold tracking-wide text-xl my-4 font-mono;
-}
-.nav-bar>ul>li:hover{
-    color:aqua;
-    text-decoration: underline;
 }
 .greeting-bar{
     @apply leading-4;
@@ -33,4 +29,9 @@
 .note-card p{
     font-size: medium;
     font-weight: 400;
+}
+.active-link{
+    border-bottom: 3px solid black;
+    font-weight: 400;
+    color: aqua;
 }
