@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout"
 import NotePage from "../pages/NotePage";
 import TodoPage from "../pages/TodoPage";
 import NoteCreation from "../pages/NoteCreation";
-import { NotesProvider } from "../context/NoteContext";
+import NoteViewAndEdit from "../pages/NoteViewAndEdit";
 
 
 const routes=createBrowserRouter([
@@ -19,6 +19,10 @@ const routes=createBrowserRouter([
                         path:"create",
                         element:<NoteCreation/>
                     },
+                    {
+                        path:"edit-view/:id",
+                        element:<NoteViewAndEdit/>
+                    }
                     
                 ]
             },

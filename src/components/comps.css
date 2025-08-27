@@ -20,6 +20,7 @@
     height: 100px;
     width: 100%;
     @apply bg-gray-300 rounded-lg shadow-lg p-2;
+    position: relative;
 }
 .note-card h2{
     font-size: larger;
@@ -34,4 +35,11 @@
     border-bottom: 3px solid black;
     font-weight: 400;
     color: aqua;
+}
+.icon-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2em;
+    margin-right: 0.5em;
+    margin-bottom: 0;
 }

@@ -14,9 +14,9 @@ export default function NoteList(){
     return (
         <div className="notes-container">
             {
-                notes.map((note,i)=>{
+                notes.map((note)=>{
                     return(
-                        <NoteCard key={i} note={note}/>
+                        <NoteCard key={note.id} note={note}/>
                     )
                 })
             }

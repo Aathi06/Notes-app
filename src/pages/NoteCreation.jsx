@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { nanoid } from "nanoid";
 import "./page.css"
 import { useNotesContext } from "../context/NoteContext";
 
@@ -19,7 +20,7 @@ export default function NoteCreation(props){
 
         if(!note.trim() || !title.trim()) return
 
-        const newNote={noteContent:note,noteTitle:title}
+        const newNote={id:nanoid(),noteContent:note,noteTitle:title}
         setNotes(prev=>{
             return(
                 [
