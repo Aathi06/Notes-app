@@ -11,10 +11,16 @@ export default function NoteList(){
         localStorage.setItem("notes",JSON.stringify(notes));
     },[notes]);
 
+    const sortedNotes=[...notes].sort((a,b)=>{
+        if(a.isFav === b.isFav) return 0
+
+        return a.isFav ? -1 : 1
+    })
+
     return (
         <div className="notes-container">
             {
-                notes.map((note)=>{
+                sortedNotes.map((note)=>{
                     return(
                         <NoteCard key={note.id} note={note}/>
                     )
