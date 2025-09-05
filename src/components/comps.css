@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-.search-bar{
-    height: 2rem;
-    @apply bg-gray-300 rounded-lg p-2 mr-2;
-    
-}
-.search-bar >input{
-   @apply text-black;
-}
 .nav-bar>ul{
     display: flex;
     gap: 1.5em;
@@ -19,29 +11,12 @@
 .note-card{
     height: 100px;
     width: 100%;
-    @apply bg-gray-300 rounded-lg shadow-lg p-2;
     position: relative;
-}
-.note-card h2{
-    font-size: larger;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-.note-card p{
-    font-size: medium;
-    font-weight: 400;
 }
 .active-link{
     border-bottom: 3px solid black;
     font-weight: 400;
     color: aqua;
-}
-.icon-container{
-    display: flex;
-    justify-content: flex-end;
-    gap: 1.2em;
-    margin-right: 0.5em;
-    margin-bottom: 0;
 }
 .todo-card{
     display: flex;

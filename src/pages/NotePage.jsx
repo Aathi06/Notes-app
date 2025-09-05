@@ -1,5 +1,6 @@
 import NoteList from "./NoteList";
 import { useNavigate, useOutlet } from "react-router";
+import { CirclePlus } from "lucide-react";
 
 export default function NotePage(){
 
@@ -12,7 +13,7 @@ export default function NotePage(){
     }
 
     return(
-        <div className="note-page flex-col mx-1 ">
+        <div className="note-page mx-1 ">
         <button className="add-note hover:bg-blue-200 bg-blue-300 font-bold  rounded-lg w-16 h-8 w-[100%]" onClick={toNoteCreation}>+</button>
         <NoteList/>
         {
