@@ -52,7 +52,7 @@ export default function TodoPage(){
                 <button>+</button>
             </form>
             {
-                todos.map((e)=><TodoCard key={e.id} tasks={e} toggle={toggleTask}/>)
+                todos.map((e)=><TodoCard key={e.id} tasks={e} setTodos={setTodos} toggle={toggleTask}/>)
             }
         </div>
     )

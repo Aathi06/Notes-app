@@ -9,8 +9,6 @@ export default function NavBar(){
             Notes</NavLink></li>
             <li><NavLink to={"/todo"} className={({isActive})=> isActive? "active-link" : ""}>
             To-Do</NavLink></li>
-            <li><NavLink to={"/fav"} className={({isActive})=> isActive? "active-link" : ""}>
-            Favourite</NavLink></li>
           </ul>
         </nav>
     )

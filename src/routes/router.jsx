@@ -30,10 +30,6 @@ const routes=createBrowserRouter([
                 path:"todo",
                 element:<TodoPage/>
             },
-            {
-                path:"fav",
-                element: <h1>Rn nothing</h1>
-            }
         ]
     }
    
