@@ -20,7 +20,7 @@ export default function NoteCreation(props){
 
         if(!note.trim() || !title.trim()) return
 
-        const newNote={id:nanoid(),noteContent:note,noteTitle:title}
+        const newNote={id:nanoid(),noteContent:note,noteTitle:title,isFav:false}
         setNotes(prev=>{
             return(
                 [
